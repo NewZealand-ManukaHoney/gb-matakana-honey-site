@@ -168,3 +168,11 @@ section h3 { font-size: 1.05rem; color: var(--gold-dark); margin-top: 30px; }
 }
 
 footer { text-align: center; padding: 30px 24px; color: #7a7256; font-size: 0.78rem; }
+footer p { margin: 0 0 6px; }
+footer a { color: #7a7256; text-decoration: underline; }
+footer a:hover { color: var(--gold-dark); }
+
+.legal-page dl { max-width: 720px; margin: 0 auto; }
+.legal-page dt { font-weight: bold; color: var(--green); margin-top: 22px; font-size: 0.92rem; }
+.legal-page dd { margin: 6px 0 0; color: #3a3526; line-height: 1.9; font-size: 0.9rem; white-space: pre-line; }
+.legal-page .legal-note { font-size: 0.75rem; color: #8a7c55; margin-top: 40px; text-align: center; }
