@@ -40,6 +40,10 @@
   .bulk-box{background:#f3ead2;border-radius:8px;padding:22px;margin-top:40px;text-align:center;}
   .bulk-box p{margin-bottom:14px;font-size:0.92rem;color:#4a4430;}
   .cap-label{font-weight:bold;font-size:0.9rem;color:#4a4430;margin:0 0 2px;}
+  .soldout-badge{display:inline-block;background:#a33;color:#fff;font-size:0.68rem;font-weight:bold;padding:2px 9px;border-radius:999px;margin-left:8px;vertical-align:middle;letter-spacing:0.03em;}
+  .buy-btn.disabled{background:#ccc;color:#888;pointer-events:none;cursor:not-allowed;}
+  .buy-btn.disabled:hover{background:#ccc;}
+  .restock-note{font-size:0.78rem;color:#8a7c55;margin:6px 0 0;}
 </style>
 </head>
 <body>
@@ -75,47 +79,55 @@
     <div class="product-card">
       <h3>MGO 250+</h3>
       <p class="subtitle">UMF10+ ／ Everyday Wellness</p>
-      <p class="cap-label">500g</p>
-      <div class="price-row list-price"><span class="label">定価</span><span class="value">¥7,500</span></div>
-      <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥6,800</span></div>
-      <div class="price-row sub" data-sub="mgo250-500"><span class="label">サブスク価格</span><span class="value">¥6,300</span></div>
-      <div class="buy-row">
-        <a class="buy-btn" id="buy-mgo250-500" href="#" target="_blank" rel="noopener">500gを購入する（会員価格）</a>
-        <a class="buy-btn sub-btn" id="buy-mgo250-500-sub" data-sub-btn="mgo250-500" href="#" target="_blank" rel="noopener">500gをサブスク価格で購入する</a>
+      <div class="size-block" data-product-name="MGO250+ 500g">
+        <p class="cap-label">500g</p>
+        <div class="price-row list-price"><span class="label">定価</span><span class="value">¥7,500</span></div>
+        <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥6,800</span></div>
+        <div class="price-row sub" data-sub="mgo250-500"><span class="label">サブスク価格</span><span class="value">¥6,300</span></div>
+        <div class="buy-row">
+          <a class="buy-btn" id="buy-mgo250-500" href="#" target="_blank" rel="noopener">500gを購入する（会員価格）</a>
+          <a class="buy-btn sub-btn" id="buy-mgo250-500-sub" data-sub-btn="mgo250-500" href="#" target="_blank" rel="noopener">500gをサブスク価格で購入する</a>
+        </div>
       </div>
-      <p class="cap-label" style="margin-top:14px;">1kg</p>
-      <div class="price-row list-price"><span class="label">定価</span><span class="value">¥16,500</span></div>
-      <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥14,500</span></div>
-      <div class="price-row sub" data-sub="mgo250-1000"><span class="label">サブスク価格</span><span class="value">¥12,000</span></div>
-      <div class="buy-row">
-        <a class="buy-btn" id="buy-mgo250-1000" href="#" target="_blank" rel="noopener">1kgを購入する（会員価格）</a>
-        <a class="buy-btn sub-btn" id="buy-mgo250-1000-sub" data-sub-btn="mgo250-1000" href="#" target="_blank" rel="noopener">1kgをサブスク価格で購入する</a>
+      <div class="size-block" data-product-name="MGO250+ 1kg">
+        <p class="cap-label" style="margin-top:14px;">1kg</p>
+        <div class="price-row list-price"><span class="label">定価</span><span class="value">¥16,500</span></div>
+        <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥14,500</span></div>
+        <div class="price-row sub" data-sub="mgo250-1000"><span class="label">サブスク価格</span><span class="value">¥12,000</span></div>
+        <div class="buy-row">
+          <a class="buy-btn" id="buy-mgo250-1000" href="#" target="_blank" rel="noopener">1kgを購入する（会員価格）</a>
+          <a class="buy-btn sub-btn" id="buy-mgo250-1000-sub" data-sub-btn="mgo250-1000" href="#" target="_blank" rel="noopener">1kgをサブスク価格で購入する</a>
+        </div>
       </div>
     </div>
 
     <div class="product-card">
       <h3>MGO 650+</h3>
       <p class="subtitle">UMF17+ ／ Daily Immunity</p>
-      <p class="cap-label">500g</p>
-      <div class="price-row list-price"><span class="label">定価</span><span class="value">¥11,500</span></div>
-      <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥9,800</span></div>
-      <div class="price-row sub" data-sub="mgo650-500"><span class="label">サブスク価格</span><span class="value">¥9,200</span></div>
-      <div class="buy-row">
-        <a class="buy-btn" id="buy-mgo650-500" href="#" target="_blank" rel="noopener">500gを購入する（会員価格）</a>
-        <a class="buy-btn sub-btn" id="buy-mgo650-500-sub" data-sub-btn="mgo650-500" href="#" target="_blank" rel="noopener">500gをサブスク価格で購入する</a>
+      <div class="size-block" data-product-name="MGO650+ 500g">
+        <p class="cap-label">500g</p>
+        <div class="price-row list-price"><span class="label">定価</span><span class="value">¥11,500</span></div>
+        <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥9,800</span></div>
+        <div class="price-row sub" data-sub="mgo650-500"><span class="label">サブスク価格</span><span class="value">¥9,200</span></div>
+        <div class="buy-row">
+          <a class="buy-btn" id="buy-mgo650-500" href="#" target="_blank" rel="noopener">500gを購入する（会員価格）</a>
+          <a class="buy-btn sub-btn" id="buy-mgo650-500-sub" data-sub-btn="mgo650-500" href="#" target="_blank" rel="noopener">500gをサブスク価格で購入する</a>
+        </div>
       </div>
     </div>
 
     <div class="product-card">
       <h3>MGO 850+</h3>
       <p class="subtitle">UMF20+ ／ Medical Grade</p>
-      <p class="cap-label">250g</p>
-      <div class="price-row list-price"><span class="label">定価</span><span class="value">¥10,000</span></div>
-      <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥9,200</span></div>
-      <div class="price-row sub" data-sub="mgo850-250"><span class="label">サブスク価格</span><span class="value">¥8,200</span></div>
-      <div class="buy-row">
-        <a class="buy-btn" id="buy-mgo850-250" href="#" target="_blank" rel="noopener">250gを購入する（会員価格）</a>
-        <a class="buy-btn sub-btn" id="buy-mgo850-250-sub" data-sub-btn="mgo850-250" href="#" target="_blank" rel="noopener">250gをサブスク価格で購入する</a>
+      <div class="size-block" data-product-name="MGO850+ 250g">
+        <p class="cap-label">250g</p>
+        <div class="price-row list-price"><span class="label">定価</span><span class="value">¥10,000</span></div>
+        <div class="price-row member-price"><span class="label">会員価格</span><span class="value">¥9,200</span></div>
+        <div class="price-row sub" data-sub="mgo850-250"><span class="label">サブスク価格</span><span class="value">¥8,200</span></div>
+        <div class="buy-row">
+          <a class="buy-btn" id="buy-mgo850-250" href="#" target="_blank" rel="noopener">250gを購入する（会員価格）</a>
+          <a class="buy-btn sub-btn" id="buy-mgo850-250-sub" data-sub-btn="mgo850-250" href="#" target="_blank" rel="noopener">250gをサブスク価格で購入する</a>
+        </div>
       </div>
     </div>
   </section>
@@ -198,6 +210,126 @@
       msg.className = 'referral-msg ng';
     }
   }
+
+  // ===== 在庫表示システム（Googleスプレッドシート連携） =====
+  // 参照CSV：商品名（A列）／在庫状況（B列：在庫有り or SOLD OUT）／次回入荷予定（C列）
+  var STOCK_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSdIXQY_jx4U5_wirSpHmcgKlBPtCSPjmG-mE1ncMdhY4sgtLb4crstbfKoRYjXkA4HKQnzpydJ01cD/pub?gid=0&single=true&output=csv';
+
+  function normalizeProductName(s) {
+    return (s || '').replace(/\s+/g, '').toLowerCase();
+  }
+
+  function parseCSV(text) {
+    var rows = [];
+    var lines = text.split(/\r\n|\n|\r/).filter(function (l) { return l.trim() !== ''; });
+    lines.forEach(function (line) {
+      var cells = [];
+      var cur = '';
+      var inQuotes = false;
+      for (var i = 0; i < line.length; i++) {
+        var ch = line[i];
+        if (inQuotes) {
+          if (ch === '"') {
+            if (line[i + 1] === '"') { cur += '"'; i++; }
+            else { inQuotes = false; }
+          } else {
+            cur += ch;
+          }
+        } else {
+          if (ch === '"') { inQuotes = true; }
+          else if (ch === ',') { cells.push(cur); cur = ''; }
+          else { cur += ch; }
+        }
+      }
+      cells.push(cur);
+      rows.push(cells);
+    });
+    return rows;
+  }
+
+  function preventClickWhileSoldOut(e) {
+    e.preventDefault();
+  }
+
+  function updateSizeBlock(block, status, nextRestock) {
+    var buyBtns = block.querySelectorAll('.buy-btn');
+    var existingBadge = block.querySelector('.soldout-badge');
+    var existingNote = block.querySelector('.restock-note');
+
+    if (status === 'SOLD OUT') {
+      buyBtns.forEach(function (btn) {
+        btn.classList.add('disabled');
+        btn.setAttribute('aria-disabled', 'true');
+        btn.removeEventListener('click', preventClickWhileSoldOut);
+        btn.addEventListener('click', preventClickWhileSoldOut);
+      });
+      if (!existingBadge) {
+        var badge = document.createElement('span');
+        badge.className = 'soldout-badge';
+        badge.textContent = 'SOLD OUT';
+        var capLabel = block.querySelector('.cap-label');
+        if (capLabel) { capLabel.appendChild(badge); }
+      }
+    } else {
+      buyBtns.forEach(function (btn) {
+        btn.classList.remove('disabled');
+        btn.removeAttribute('aria-disabled');
+        btn.removeEventListener('click', preventClickWhileSoldOut);
+      });
+      if (existingBadge) { existingBadge.remove(); }
+    }
+
+    if (nextRestock) {
+      if (existingNote) {
+        existingNote.textContent = '次回入荷予定：' + nextRestock;
+      } else {
+        var note = document.createElement('p');
+        note.className = 'restock-note';
+        note.textContent = '次回入荷予定：' + nextRestock;
+        var buyRow = block.querySelector('.buy-row');
+        if (buyRow) { buyRow.parentNode.insertBefore(note, buyRow); }
+      }
+    } else if (existingNote) {
+      existingNote.remove();
+    }
+  }
+
+  function applyStockStatus(rows) {
+    var blocks = document.querySelectorAll('[data-product-name]');
+    rows.forEach(function (row) {
+      var name = row[0] ? row[0].trim() : '';
+      var status = row[1] ? row[1].trim() : '';
+      var nextRestock = row[2] ? row[2].trim() : '';
+      if (!name) { return; }
+      // ヘッダー行など、想定外のB列の値は在庫行として扱わずスキップ
+      if (status !== '在庫有り' && status !== 'SOLD OUT') { return; }
+
+      var normName = normalizeProductName(name);
+      blocks.forEach(function (block) {
+        if (normalizeProductName(block.getAttribute('data-product-name')) === normName) {
+          updateSizeBlock(block, status, nextRestock);
+        }
+      });
+    });
+  }
+
+  function loadStockStatus() {
+    fetch(STOCK_CSV_URL, { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) { throw new Error('CSV取得失敗: ' + res.status); }
+        return res.text();
+      })
+      .then(function (text) {
+        var rows = parseCSV(text);
+        applyStockStatus(rows);
+      })
+      .catch(function (err) {
+        // 取得に失敗した場合は在庫表示を更新せず、デフォルト（在庫有り扱い）のまま表示する
+        console.warn('在庫情報の取得に失敗しました。デフォルト表示のままにします。', err);
+      });
+  }
+
+  document.addEventListener('DOMContentLoaded', loadStockStatus);
 </script>
 </body>
 </html>
