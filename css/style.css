@@ -90,6 +90,15 @@ nav a:hover, nav a.active {
   color: var(--gold);
 }
 
+.nowrap { white-space: nowrap; }
+
+@media (max-width: 768px) {
+  br.pc-only { display: none; }
+}
+@media (min-width: 769px) {
+  br.mobile-only { display: none; }
+}
+
 .hero {
   padding: 64px 24px 48px;
   text-align: center;
